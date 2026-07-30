@@ -11,7 +11,7 @@ const spotlightProjects = {
     desc: "A Portal 2-inspired 3D puzzle platformer with a split mechanic built in Unity",
     techStack: "C# (UNITY)",
     link: "https://github.com/gazijarin/Blob",
-    image: "/assets/blob.png",
+    image: "./assets/blob.png",
   },
   "No Man's Land": {
     title: "no man's land",
@@ -19,7 +19,7 @@ const spotlightProjects = {
     techStack: "C# (UNITY)",
     link: "https://github.com/slakh96/no-mans-land",
     open: "https://gazijarin.itch.io/no-mans-land",
-    image: "/assets/nomansland.png",
+    image: "./assets/nomansland.png",
   },
   "Tall Tales": {
     title: "tall tales",
@@ -27,15 +27,15 @@ const spotlightProjects = {
     techStack: "NODE.JS (SOCKET.IO), REACT.JS, MONGODB",
     link: "https://github.com/gazijarin/TallTales",
     open: "https://talltales.herokuapp.com/",
-    image: "/assets/talltales.png",
+    image: "./assets/talltales.png",
   },
   Portfolio: {
     title: "portfolio.js",
     desc: "A small JS library that helps with clear and succinct data presentation.",
     techStack: "NODE.JS (EXPRESS.JS)",
     link: "https://github.com/gazijarin/Portfolio.js",
-    open: "https://afternoon-ocean-92382.herokuapp.com/",
-    image: "/assets/portfolio.png",
+    open: "https://devvx.in/",
+    image: "./assets/portfolio.png",
   },
 };
 
