@@ -69,7 +69,7 @@ function App() {
       <div id="content">
         <Routes>
           <Route
-            path="/"
+            path="*"
             element={
               <>
                 <Intro />
