@@ -50,15 +50,6 @@ const JobList = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const experienceItems = {
-    "Etech Global Services": {
-      jobTitle: "Associate Manager @",
-      duration: "PREVIOUSLY",
-      desc: [
-        "Managed cross-functional teams and operational workflows to ensure high-quality service delivery and performance targets.",
-        "Engineered automation and backend Python scripts to streamline reporting, data analysis, and process efficiency.",
-        "Collaborated across departments to optimize system workflows, user experiences, and operational scalability.",
-      ],
-    },
     "Backend Engineering": {
       jobTitle: "Backend Software Engineer @",
       duration: "PRESENT",
@@ -66,6 +57,15 @@ const JobList = () => {
         "Designed and developed scalable backend microservices and RESTful APIs using Python, FastAPI, and SQL.",
         "Implemented robust data structures and algorithms (DSA) to optimize system execution time and resource utilization.",
         "Configured automated CI/CD deployment pipelines using GitHub Actions for seamless deployment to production servers.",
+      ],
+    },
+    "Etech Global Services": {
+      jobTitle: "Associate Manager @",
+      duration: "PREVIOUSLY",
+      desc: [
+        "Managed cross-functional teams and operational workflows to ensure high-quality service delivery and performance targets.",
+        "Engineered automation and backend Python scripts to streamline reporting, data analysis, and process efficiency.",
+        "Collaborated across departments to optimize system workflows, user experiences, and operational scalability.",
       ],
     },
   };
