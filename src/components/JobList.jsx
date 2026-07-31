@@ -54,9 +54,9 @@ const JobList = () => {
       jobTitle: "SWE @",
       duration: "PRESENT",
       desc: [
-        "Designed and developed scalable backend microservices and RESTful APIs using Python, FastAPI, and SQL.",
-        "Implemented robust data structures and algorithms (DSA) to optimize system execution time and resource utilization.",
-        "Configured automated CI/CD deployment pipelines using GitHub Actions for seamless deployment to production servers.",
+        "Built and shipped three full-stack backend APIs (Todo API, Expense Tracker, RoleForum) using Python, FastAPI, SQLAlchemy, and PostgreSQL with Docker.",
+        "Implemented JWT-based authentication, per-user data ownership, and role-based access control (admin vs. regular user) across all projects.",
+        "Managed schema evolution with Alembic migrations, including diagnosing and recovering from migration failures in production-like environments.",
       ],
     },
     "Etech Global Services": {
@@ -64,8 +64,6 @@ const JobList = () => {
       duration: "PREVIOUSLY",
       desc: [
         "Managed inbound calling operations and US events across the globe, delivering high-impact Customer Experience (CX) support and performance targets.",
-        "Engineered automation and backend Python scripts to streamline reporting, data analysis, and process efficiency.",
-        "Collaborated across departments to optimize system workflows, user experiences, and operational scalability.",
       ],
     },
   };

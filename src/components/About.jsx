@@ -15,17 +15,17 @@ const About = () => {
   );
   const two = (
     <p>
-      In my free time, I’m nerdy about tech gadgets, love literary fiction, and
-      play way too many battle royale games. Oh, I make content too.
+      In my free time, I’m nerdy about tech gadgets, love to code , and
+      play way too competetive games . Oh, I make content too.
     </p>
   );
 
   const techStack = [
     "Python",
-    "Typescript",
-    "React.js",
-    "Java",
-    "Javascript ES6+",
+    "Javascript",
+    "SQL",
+    "Docker",
+    "Data Structure and Algorithm",
   ];
 
   return (

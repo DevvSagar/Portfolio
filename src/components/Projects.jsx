@@ -7,64 +7,37 @@ import ExternalLinks from "./ExternalLinks";
 
 const spotlightProjects = {
   Blob: {
-    title: "blob",
-    desc: "A Portal 2-inspired 3D puzzle platformer with a split mechanic built in Unity",
-    techStack: "C# (UNITY)",
-    link: "https://github.com/gazijarin/Blob",
-    image: "./assets/blob.png",
-  },
-  "No Man's Land": {
-    title: "no man's land",
-    desc: "A third-person survival-mode game where you battle against time and space to return to Earth.",
-    techStack: "C# (UNITY)",
-    link: "https://github.com/slakh96/no-mans-land",
-    open: "https://gazijarin.itch.io/no-mans-land",
-    image: "./assets/nomansland.png",
-  },
-  "Tall Tales": {
-    title: "tall tales",
-    desc: "A multi-player story-telling web game for 3-5 players. Its usage of sockets to allow for concurrent gameplay, connecting friends across the internet.",
-    techStack: "NODE.JS (SOCKET.IO), REACT.JS, MONGODB",
-    link: "https://github.com/gazijarin/TallTales",
-    open: "https://talltales.herokuapp.com/",
-    image: "./assets/talltales.png",
+    title: "Scribo",
+    desc: "Scribo is an AI meeting summarizer that converts audio and video into transcripts, summaries, action items, and per-user chat history.",
+    techStack: "Javascript",
+    link: "https://github.com/DevvSagar/scribo",
+    image: "./assets/scribo.png",
   },
   Portfolio: {
     title: "portfolio.js",
     desc: "A small JS library that helps with clear and succinct data presentation.",
     techStack: "NODE.JS (EXPRESS.JS)",
-    link: "https://github.com/gazijarin/Portfolio.js",
-    open: "https://devvx.in/",
+    link: "https://github.com/DevvSagar/Portfolio",
     image: "./assets/portfolio.png",
   },
 };
 
 const projects = {
-  "Gazi-V2 Portfolio": {
-    desc: "This is the second iteration of my portfolio, designed and rebuilt from the ground up using React and Vite. The previous version, now deprecated, earned 288+ stars on GitHub.",
-    techStack: "React.js, Vite, Bootstrap",
-    link: "https://github.com/gazijarin/Gazi-V2",
-    open: "https://devvx.in/",
+  "Todo API": {
+    desc: "Todo API — FastAPI CRUD with JWT auth; latest addition: dependency-based route protection (HTTPBearer + JWT check), tested working with/without token.",
+    techStack: "FastAPI, SQLAlchemy, Postgres, Docker, JWT",
+    link: "https://github.com/DevvSagar/Todo-FastAPI",
   },
-  "TDSB Homework Management Interface": {
-    desc: "An application created for Toronto District School Board, with a Flask back-end and a Vue front-end.",
-    techStack: "Python (Flask), Vue.js, Bootstrap, SQL",
-    link: "https://github.com/gazijarin/TDSBHomeworkManagement",
-    open: "https://tdsb-app.herokuapp.com/",
+  "Expense Tracker API": {
+    desc: "Expense Tracker — FastAPI CRUD (list, get, filter by category, total, summary) with JWT auth and per-user ownership on every route; built independently without copy-pasting from the Todo project.",
+    techStack: "FastAPI, SQLAlchemy, Postgres, Docker, JWT",
+    link: "https://github.com/DevvSagar/Expense-Tracker-FastAPI",
   },
-  "Adam A.I.": {
-    desc: "A self-learning A.I. that learns to traverse through a complex maze using the genetic algorithm.",
-    techStack: "Javascript, HTML / CSS",
-    link: "https://github.com/gazijarin/adamai",
-    open: "https://gazijarin.github.io/AdamAI/",
+  "Role-Forum API": {
+    desc: "RoleForum — Blog/forum app with role-based access; Post & Comment models with owner-or-admin permission checks, tested end-to-end (regular users blocked with 403, admins can override).",
+    techStack: "FastAPI, SQLAlchemy, Postgres, Docker, JWT (+roles)",
+    link: "https://github.com/DevvSagar/Role-Forum",
   },
-  /*
-  "Distributed Logging and Monitoring System": {
-    desc: "A system that establishes an ORM connection to a Prisma client in order to communicate logs from microservices.",
-    techStack: "Node.js (Express.js), React.js, PostgreSQL",
-    link: "https://github.com/gazijarin/Distributed-Logging-and-Monitoring-System",
-  },
-  */
 };
 
 const Projects = () => {
@@ -73,7 +46,7 @@ const Projects = () => {
       <div className="section-header ">
         <span className="section-title">/ software</span>
         <a
-          href="https://github.com/gazijarin"
+          href="https://github.com/DevvSagar"
           className="explore-link"
           target="_blank"
           rel="noopener noreferrer"
@@ -92,16 +65,17 @@ const Projects = () => {
               />
               <Carousel.Caption>
                 <h3>{spotlightProjects[key]["title"]}</h3>
-                <div>
+                <div className="spotlight-desc">
                   {spotlightProjects[key]["desc"]}
-                  <div className="techStack">
-                    {spotlightProjects[key]["techStack"]}
-                  </div>
                 </div>
-                <ExternalLinks
-                  githubLink={spotlightProjects[key]["link"]}
-                  openLink={spotlightProjects[key]["open"]}
-                />
+                <div className="techStack">
+                  {spotlightProjects[key]["techStack"]}
+                </div>
+                <div className="spotlight-links">
+                  <ExternalLinks
+                    githubLink={spotlightProjects[key]["link"]}
+                  />
+                </div>
               </Carousel.Caption>
             </Carousel.Item>
           ))}
@@ -118,15 +92,11 @@ const Projects = () => {
                 </div>
                 <ExternalLinks
                   githubLink={spotlightProjects[key]["link"]}
-                  openLink={spotlightProjects[key]["open"]}
                 />
               </div>
 
               <a
-                href={
-                  spotlightProjects[key]["open"] ||
-                  spotlightProjects[key]["link"]
-                }
+                href={spotlightProjects[key]["link"]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-card-link"
@@ -155,7 +125,6 @@ const Projects = () => {
                   </div>
                   <ExternalLinks
                     githubLink={projects[key]["link"]}
-                    openLink={projects[key]["open"]}
                   />
                 </div>
 

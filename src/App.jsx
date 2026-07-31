@@ -75,7 +75,7 @@ function App() {
                 <Intro />
                 <About />
                 <Experience />
-                {/* <Projects /> */}
+                <Projects />
                 <Credits />
               </>
             }

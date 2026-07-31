@@ -11,7 +11,7 @@ const SidebarNav = () => {
     <a key="1" href="/#intro"><span className="nav-slash">/</span>home</a>,
     <a key="2" href="/#about"><span className="nav-slash">/</span>about</a>,
     <a key="3" href="/#experience"><span className="nav-slash">/</span>experience</a>,
-    // <a key="4" href="/#projects"><span className="nav-slash">/</span>software</a>
+    <a key="4" href="/#projects"><span className="nav-slash">/</span>software</a>
   ];
 
   return (
