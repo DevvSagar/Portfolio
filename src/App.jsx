@@ -74,7 +74,7 @@ function App() {
               <>
                 <Intro />
                 <About />
-                {/* <Experience /> */}
+                <Experience />
                 {/* <Projects /> */}
                 <Credits />
               </>

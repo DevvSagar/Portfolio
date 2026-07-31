@@ -50,38 +50,22 @@ const JobList = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const experienceItems = {
-    Google: {
-      jobTitle: "Software Engineer III @",
-      duration: "JAN 2025 - PRESENT",
+    "Etech Global Services": {
+      jobTitle: "Associate Manager @",
+      duration: "PREVIOUSLY",
       desc: [
-        "Built and launched large-scale machine learning-driven conversion autobidding models at Google scale, influencing bidding decisions across millions of advertisers and users",
-        "Integrated Google Gemini encoders into bidding models to enhance feature representation and improve prediction performance",
-        "Led end-to-end model development (data, training, evaluation, and production launch) for Proxybidder ML systems, directly driving multi-million-dollar revenue impact through improved conversion efficiency",
+        "Managed cross-functional teams and operational workflows to ensure high-quality service delivery and performance targets.",
+        "Engineered automation and backend Python scripts to streamline reporting, data analysis, and process efficiency.",
+        "Collaborated across departments to optimize system workflows, user experiences, and operational scalability.",
       ],
     },
-    Pinterest: {
-      jobTitle: "Software Engineer II @",
-      duration: "JUL 2024 - JAN 2025",
+    "Backend Engineering": {
+      jobTitle: "Backend Software Engineer @",
+      duration: "PRESENT",
       desc: [
-        "Led the development of a generative AI solution using LLMs for advanced prompt engineering, improving SEO and ad relevance, and resulting in a 20% increase in click-through rates, ad revenue and business visibility",
-        "Designed and developed an intuitive user interface for a prompt management system for 500K+ users, with key focus on accessibility, real-time collaboration features, and dynamic data visualization",
-      ],
-    },
-    Amazon: {
-      jobTitle: "Software Development Engineer II @",
-      duration: "JUL 2022 - MAY 2024",
-      desc: [
-        "Led development of end-to-end region build automation across Route 53 (AWS's DNS web service).  This enabled the launch of customer-facing global services in new regions within a day, a significant reduction from the previous time-frame of a month.",
-        "Re-built Route 53's core domain management and DNS systems to provide a better user experience to millions of customers.",
-      ],
-    },
-    Wattpad: {
-      jobTitle: "Software Engineer Intern @",
-      duration: "MAY 2020 - APR 2021",
-      desc: [
-        "Developed a responsive React web page (the new Story Details) from scratch, both on client and server side, for an app with massive scale (2 billion daily requests).",
-        "Iteratively built web experiences for 80 million users across high-traffic pages.",
-        "Collaborated with senior engineers and product management following best practices for the full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations.",
+        "Designed and developed scalable backend microservices and RESTful APIs using Python, FastAPI, and SQL.",
+        "Implemented robust data structures and algorithms (DSA) to optimize system execution time and resource utilization.",
+        "Configured automated CI/CD deployment pipelines using GitHub Actions for seamless deployment to production servers.",
       ],
     },
   };
