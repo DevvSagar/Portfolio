@@ -51,7 +51,7 @@ const JobList = () => {
 
   const experienceItems = {
     "Backend Engineering": {
-      jobTitle: "Backend Software Engineer @",
+      jobTitle: "SWE @",
       duration: "PRESENT",
       desc: [
         "Designed and developed scalable backend microservices and RESTful APIs using Python, FastAPI, and SQL.",
@@ -63,7 +63,7 @@ const JobList = () => {
       jobTitle: "Associate Manager @",
       duration: "PREVIOUSLY",
       desc: [
-        "Managed cross-functional teams and operational workflows to ensure high-quality service delivery and performance targets.",
+        "Managed inbound calling operations and US events across the globe, delivering high-impact Customer Experience (CX) support and performance targets.",
         "Engineered automation and backend Python scripts to streamline reporting, data analysis, and process efficiency.",
         "Collaborated across departments to optimize system workflows, user experiences, and operational scalability.",
       ],
