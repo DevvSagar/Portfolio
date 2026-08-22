@@ -46,14 +46,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
             <div className="relative w-7 h-7 rounded-full overflow-hidden bg-zinc-800 border border-white/20 shadow-inner flex-shrink-0">
               <Image
                 src={portfolioData.profile.avatarHeadshot || portfolioData.profile.avatar}
-                alt={portfolioData.profile.handle}
+                alt={portfolioData.profile.fullName || portfolioData.profile.handle}
                 fill
                 priority
-                className="object-cover object-center"
+                className="object-cover object-top"
               />
             </div>
             <span className="text-xs font-semibold tracking-wide">
-              {portfolioData.profile.firstNameOutline} {portfolioData.profile.lastNameSolid}
+              {portfolioData.profile.fullName || `${portfolioData.profile.firstNameOutline}${portfolioData.profile.lastNameSolid}`}
             </span>
           </div>
 

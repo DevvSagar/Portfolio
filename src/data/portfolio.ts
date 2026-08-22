@@ -4,6 +4,7 @@ export const portfolioData = {
   profile: {
     firstNameOutline: "DEV",
     lastNameSolid: "VX",
+    fullName: "Sagar Pratap Singh",
     handle: "devvx",
     domain: "devvx.in",
     role: "Advanced AI & Backend Engineer",

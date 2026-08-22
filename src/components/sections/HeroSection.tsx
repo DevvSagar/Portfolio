@@ -119,7 +119,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
               onMouseMove={handleMouseMove}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="relative w-[210px] sm:w-[260px] md:w-[290px] lg:w-[320px] max-w-[340px] aspect-[416/683] cursor-pointer group select-none [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
+              className="relative w-[210px] sm:w-[260px] md:w-[290px] lg:w-[320px] max-w-[340px] aspect-[416/683] group select-none [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]"
             >
               {/* Base Layer: Clean Grayscale / Black & White */}
               <div className="absolute inset-0 grayscale contrast-110 brightness-95 select-none pointer-events-none transition-all duration-300">
