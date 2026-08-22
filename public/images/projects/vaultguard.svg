@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vaultGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="24" fill="url(#vaultGrad)" />
+
+  <!-- Shield/Vault Center Node -->
+  <rect x="260" y="140" width="280" height="220" rx="20" fill="#1e293b" stroke="#f59e0b" stroke-width="2" />
+  <circle cx="400" cy="210" r="36" fill="#0f172a" stroke="#f59e0b" stroke-width="2" />
+  <path d="M 390 205 L 410 205 L 410 220 L 390 220 Z M 395 205 L 395 198 C 395 194 405 194 405 198 L 405 205" stroke="#fbbf24" stroke-width="2" fill="none" />
+  
+  <text x="400" y="275" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#f8fafc" text-anchor="middle">ZERO-TRUST VAULT</text>
+  <text x="400" y="298" font-family="monospace" font-size="12" fill="#fbbf24" text-anchor="middle">AES-256-GCM KEY ROTATION</text>
+  <text x="400" y="325" font-family="monospace" font-size="11" fill="#94a3b8" text-anchor="middle">Ed25519 Token Signing</text>
+
+  <!-- Left: Auth Ingestion & Policy Engine -->
+  <rect x="50" y="200" width="140" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="1.5" />
+  <text x="120" y="235" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">RBAC Engine</text>
+  <text x="120" y="255" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">&lt; 3ms Validation</text>
+
+  <!-- Right: Storage Ledger -->
+  <rect x="610" y="200" width="140" height="80" rx="12" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+  <text x="680" y="235" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Audit Ledger</text>
+  <text x="680" y="255" font-family="monospace" font-size="10" fill="#34d399" text-anchor="middle">Immutable Chain</text>
+
+  <!-- Connectors -->
+  <path d="M 190 240 L 260 240" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+  <path d="M 540 240 L 610 240" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+
+  <!-- Top Badge -->
+  <rect x="30" y="30" width="160" height="32" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" />
+  <circle cx="48" cy="46" r="4" fill="#f59e0b" />
+  <text x="62" y="51" font-family="monospace" font-size="11" font-weight="bold" fill="#e2e8f0">RUST / POSTGRESQL</text>
+
+  <text x="400" y="440" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="middle">SOC2 Type II Compliant Architecture</text>
+</svg>

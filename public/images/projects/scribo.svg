@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradScribo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="emeraldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="glowScribo" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="24" fill="url(#bgGradScribo)" />
+  
+  <!-- Grid lines -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="300" y1="0" x2="300" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="500" y1="0" x2="500" y2="500" />
+    <line x1="600" y1="0" x2="600" y2="500" />
+    <line x1="700" y1="0" x2="700" y2="500" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+  </g>
+
+  <!-- Central AI Intelligence & Summarization Engine Node -->
+  <rect x="270" y="150" width="260" height="195" rx="18" fill="#18181b" stroke="#8b5cf6" stroke-width="2" filter="url(#glowScribo)" />
+  <text x="400" y="195" font-family="system-ui, sans-serif" font-size="17" font-weight="bold" fill="#f8fafc" text-anchor="middle">SCRIBO AI CORE</text>
+  <text x="400" y="220" font-family="monospace" font-size="12" fill="#a78bfa" text-anchor="middle">TRANSCRIPTION &amp; LLM INFERENCE</text>
+
+  <!-- Sub modules inside AI Core -->
+  <rect x="295" y="245" width="65" height="42" rx="8" fill="#09090b" stroke="#6366f1" stroke-width="1.5" />
+  <text x="327" y="270" font-family="monospace" font-size="10" fill="#c7d2fe" text-anchor="middle">Audio STT</text>
+  
+  <rect x="368" y="245" width="65" height="42" rx="8" fill="#09090b" stroke="#8b5cf6" stroke-width="1.5" />
+  <text x="400" y="270" font-family="monospace" font-size="10" fill="#e9d5ff" text-anchor="middle">Summary</text>
+
+  <rect x="440" y="245" width="65" height="42" rx="8" fill="#09090b" stroke="#a855f7" stroke-width="1.5" />
+  <text x="472" y="270" font-family="monospace" font-size="10" fill="#f3e8ff" text-anchor="middle">Action Items</text>
+
+  <!-- Bottom per-user chat pill -->
+  <rect x="315" y="298" width="170" height="26" rx="13" fill="#2e1065" stroke="#a78bfa" stroke-width="1" />
+  <text x="400" y="315" font-family="monospace" font-size="10" font-weight="bold" fill="#ede9fe" text-anchor="middle">Per-User Chat History</text>
+
+  <!-- Input Nodes (Left) -->
+  <rect x="60" y="180" width="145" height="55" rx="12" fill="#18181b" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+  <text x="132" y="205" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">Audio / Video Upload</text>
+  <text x="132" y="222" font-family="monospace" font-size="10" fill="#71717a" text-anchor="middle">MP3, MP4, WAV</text>
+
+  <rect x="60" y="260" width="145" height="55" rx="12" fill="#18181b" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+  <text x="132" y="285" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">Full-Stack Auth</text>
+  <text x="132" y="302" font-family="monospace" font-size="10" fill="#71717a" text-anchor="middle">User Sessions &amp; RBAC</text>
+
+  <!-- Output Nodes (Right) -->
+  <rect x="595" y="180" width="145" height="55" rx="12" fill="#18181b" stroke="#10b981" stroke-width="1.5" />
+  <text x="667" y="205" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">Structured Summary</text>
+  <text x="667" y="222" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Executive Highlights</text>
+
+  <rect x="595" y="260" width="145" height="55" rx="12" fill="#18181b" stroke="#06b6d4" stroke-width="1.5" />
+  <text x="667" y="285" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#22d3ee" text-anchor="middle">Action Items &amp; Chat</text>
+  <text x="667" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">Interactive Q&amp;A</text>
+
+  <!-- Connecting Lines -->
+  <path d="M 205 207 L 270 220" stroke="url(#purpleGlow)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+  <path d="M 205 287 L 270 260" stroke="url(#purpleGlow)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+
+  <path d="M 530 220 L 595 207" stroke="url(#emeraldGlow)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+  <path d="M 530 260 L 595 287" stroke="url(#emeraldGlow)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+
+  <!-- Top Badge -->
+  <rect x="30" y="30" width="180" height="32" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" />
+  <circle cx="48" cy="46" r="4" fill="#8b5cf6" />
+  <text x="62" y="51" font-family="monospace" font-size="11" font-weight="bold" fill="#e2e8f0">AI MEETING INTELLIGENCE</text>
+
+  <!-- Bottom Metric -->
+  <text x="400" y="435" font-family="monospace" font-size="13" fill="#94a3b8" text-anchor="middle">Transcripts • Summaries • Highlights • Action Items • Per-User History</text>
+</svg>

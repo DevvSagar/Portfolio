@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradRole" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#042f2e" />
+    </linearGradient>
+    <linearGradient id="tealGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="cyanGlow2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="glowRole" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="24" fill="url(#bgGradRole)" />
+  
+  <!-- Grid lines -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="300" y1="0" x2="300" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="500" y1="0" x2="500" y2="500" />
+    <line x1="600" y1="0" x2="600" y2="500" />
+    <line x1="700" y1="0" x2="700" y2="500" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+  </g>
+
+  <!-- Central Processing Engine: FastAPI RBAC Engine -->
+  <rect x="270" y="150" width="260" height="200" rx="18" fill="#064e3b" stroke="#14b8a6" stroke-width="2" filter="url(#glowRole)" />
+  <text x="400" y="195" font-family="system-ui, sans-serif" font-size="17" font-weight="bold" fill="#f0fdfa" text-anchor="middle">FASTAPI RBAC ENGINE</text>
+  <text x="400" y="218" font-family="monospace" font-size="12" fill="#5eead4" text-anchor="middle">ROLE-BASED AUTHORIZATION</text>
+
+  <!-- Permission Matrix Nodes -->
+  <rect x="295" y="240" width="65" height="42" rx="8" fill="#022c22" stroke="#0d9488" stroke-width="1.5" />
+  <text x="327" y="265" font-family="monospace" font-size="10" fill="#99f6e4" text-anchor="middle">Public</text>
+
+  <rect x="368" y="240" width="65" height="42" rx="8" fill="#022c22" stroke="#10b981" stroke-width="1.5" />
+  <text x="400" y="265" font-family="monospace" font-size="10" fill="#a7f3d0" text-anchor="middle">Author</text>
+
+  <rect x="440" y="240" width="65" height="42" rx="8" fill="#022c22" stroke="#f59e0b" stroke-width="1.5" />
+  <text x="472" y="265" font-family="monospace" font-size="10" fill="#fde68a" text-anchor="middle">Admin</text>
+
+  <!-- Bottom Token Pill -->
+  <rect x="305" y="298" width="190" height="26" rx="13" fill="#042f2e" stroke="#14b8a6" stroke-width="1" />
+  <text x="400" y="315" font-family="monospace" font-size="10" font-weight="bold" fill="#ccfbf1" text-anchor="middle">JWT Claims &amp; Password Hash</text>
+
+  <!-- Left: Client Roles Ingress -->
+  <rect x="60" y="175" width="145" height="55" rx="12" fill="#064e3b" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+  <text x="132" y="200" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#f0fdfa" text-anchor="middle">Public / Users</text>
+  <text x="132" y="217" font-family="monospace" font-size="10" fill="#99f6e4" text-anchor="middle">Read / Write Posts</text>
+
+  <rect x="60" y="265" width="145" height="55" rx="12" fill="#064e3b" stroke="#f59e0b" stroke-width="1.5" />
+  <text x="132" y="290" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fef3c7" text-anchor="middle">Admin Override</text>
+  <text x="132" y="307" font-family="monospace" font-size="10" fill="#fde68a" text-anchor="middle">Moderation Matrix</text>
+
+  <!-- Right: Storage Layer -->
+  <rect x="595" y="175" width="145" height="55" rx="12" fill="#064e3b" stroke="#10b981" stroke-width="1.5" />
+  <text x="667" y="200" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#34d399" text-anchor="middle">PostgreSQL DB</text>
+  <text x="667" y="217" font-family="monospace" font-size="10" fill="#a7f3d0" text-anchor="middle">Users, Posts, Comments</text>
+
+  <rect x="595" y="265" width="145" height="55" rx="12" fill="#064e3b" stroke="#06b6d4" stroke-width="1.5" />
+  <text x="667" y="290" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#22d3ee" text-anchor="middle">SQLAlchemy + Alembic</text>
+  <text x="667" y="307" font-family="monospace" font-size="10" fill="#a5f3fc" text-anchor="middle">Relational Schema</text>
+
+  <!-- Connecting Lines -->
+  <path d="M 205 202 L 270 220" stroke="url(#tealGlow)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+  <path d="M 205 292 L 270 260" stroke="url(#tealGlow)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+
+  <path d="M 530 220 L 595 202" stroke="url(#cyanGlow2)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+  <path d="M 530 260 L 595 292" stroke="url(#cyanGlow2)" stroke-width="2.5" stroke-dasharray="6,4" fill="none" />
+
+  <!-- Top Badge -->
+  <rect x="30" y="30" width="180" height="32" rx="16" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" />
+  <circle cx="48" cy="46" r="4" fill="#14b8a6" />
+  <text x="62" y="51" font-family="monospace" font-size="11" font-weight="bold" fill="#f0fdfa">PYTHON / FASTAPI RBAC</text>
+
+  <!-- Bottom Metric -->
+  <text x="400" y="435" font-family="monospace" font-size="13" fill="#99f6e4" text-anchor="middle">Public Access • Author Ownership • Admin Moderation Override • JWT Security</text>
+</svg>
