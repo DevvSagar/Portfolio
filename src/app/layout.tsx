@@ -116,8 +116,12 @@ const jsonLd = {
       '@type': 'Person',
       '@id': 'https://devvx.in/#person',
       name: 'Sagar Pratap Singh',
+      givenName: 'Sagar',
+      additionalName: 'Pratap',
+      familyName: 'Singh',
       alternateName: ['Devvx', 'Sagar Singh', 'DevvSagar', 'devvx.in'],
       jobTitle: 'Advanced AI & Backend Engineer',
+      gender: 'https://schema.org/Male',
       url: 'https://devvx.in',
       image: 'https://devvx.in/images/devvx-photo.png',
       sameAs: [
@@ -127,6 +131,11 @@ const jsonLd = {
         'https://discord.com/users/devvx.',
         'https://www.instagram.com/sagarssinghh',
       ],
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: 'Advanced AI & Backend Engineer',
+        skills: 'Python, FastAPI, AssemblyAI, PostgreSQL, Docker, AWS S3, System Design, REST APIs',
+      },
       knowsAbout: [
         'Advanced AI & Backend Engineering',
         'Python Backend Development',
@@ -140,7 +149,7 @@ const jsonLd = {
         'Full-Stack Web Development',
       ],
       description:
-        'Sagar Pratap Singh (Devvx) is an Advanced AI & Backend Engineer specializing in building production-grade AI intelligence pipelines, high-performance FastAPI backends, PostgreSQL schemas, and scalable cloud architectures.',
+        'Sagar Pratap Singh (known as Devvx) is an Advanced AI & Backend Engineer specializing in building production-grade AI intelligence pipelines, high-performance FastAPI backends, PostgreSQL schemas, and scalable cloud architectures.',
     },
     {
       '@type': 'WebSite',
