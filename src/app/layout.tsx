@@ -66,9 +66,9 @@ export const metadata: Metadata = {
       'Official portfolio of Sagar Pratap Singh (Devvx) — Advanced AI & Backend Engineer. Building production AI intelligence pipelines, high-performance FastAPI backends, PostgreSQL schemas, and cloud architectures.',
     images: [
       {
-        url: '/images/devvx-photo.png',
-        width: 1200,
-        height: 630,
+        url: 'https://devvx.in/images/devvx-photo.png',
+        width: 682,
+        height: 1024,
         alt: 'Sagar Pratap Singh (Devvx) — Advanced AI & Backend Engineer',
       },
     ],
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     description:
       'Official portfolio of Sagar Pratap Singh (Devvx) — Advanced AI & Backend Engineer. Building production AI intelligence pipelines, high-performance FastAPI backends, PostgreSQL schemas, and cloud architectures.',
     creator: '@devvxsagar',
-    images: ['/images/devvx-photo.png'],
+    images: ['https://devvx.in/images/devvx-photo.png'],
   },
   icons: {
     icon: [
