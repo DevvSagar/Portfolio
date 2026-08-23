@@ -70,10 +70,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           transition={{ duration: 0.7, ease: 'easeOut' }}
           className="flex items-center justify-center gap-3 sm:gap-6 md:gap-10 tracking-tight"
         >
-          <span className="text-stroke-outline text-[4.5rem] sm:text-[7rem] md:text-[9.5rem] lg:text-[12rem] font-black uppercase leading-none">
+          <span className="sr-only">Sagar Pratap Singh (Devvx) — Advanced AI &amp; Backend Engineer</span>
+          <span className="text-stroke-outline text-[4.5rem] sm:text-[7rem] md:text-[9.5rem] lg:text-[12rem] font-black uppercase leading-none" aria-hidden="true">
             {portfolioData.profile.firstNameOutline}
           </span>
-          <span className="text-zinc-900 text-[4.5rem] sm:text-[7rem] md:text-[9.5rem] lg:text-[12rem] font-black uppercase leading-none">
+          <span className="text-zinc-900 text-[4.5rem] sm:text-[7rem] md:text-[9.5rem] lg:text-[12rem] font-black uppercase leading-none" aria-hidden="true">
             {portfolioData.profile.lastNameSolid}
           </span>
         </motion.div>
@@ -90,6 +91,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             className="md:col-span-4 z-20 pb-6 sm:pb-10 text-center md:text-left"
           >
             <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mb-2">
+              <span className="sr-only">Sagar Pratap Singh — </span>
               {portfolioData.profile.role}
             </h1>
             <p className="text-sm sm:text-base text-zinc-600 font-normal leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
