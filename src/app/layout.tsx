@@ -83,12 +83,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/images/devvx-headshot.png', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon.png', sizes: '96x96', type: 'image/png' },
+      { url: '/images/devvx-headshot.png', sizes: '300x300', type: 'image/png' },
     ],
     apple: [
-      { url: '/images/devvx-headshot.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
+    shortcut: '/favicon.ico',
   },
   manifest: '/manifest.webmanifest',
   robots: {
