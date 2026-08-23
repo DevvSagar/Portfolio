@@ -135,6 +135,21 @@ const jsonLd = {
         '@type': 'Occupation',
         name: 'Advanced AI & Backend Engineer',
         skills: 'Python, FastAPI, AssemblyAI, PostgreSQL, Docker, AWS S3, System Design, REST APIs',
+        occupationLocation: {
+          '@type': 'Country',
+          name: 'India',
+        },
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Kota',
+        addressRegion: 'Rajasthan',
+        addressCountry: 'India',
+      },
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Independent Engineering',
+        url: 'https://devvx.in',
       },
       knowsAbout: [
         'Advanced AI & Backend Engineering',
