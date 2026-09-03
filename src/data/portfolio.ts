@@ -298,7 +298,7 @@ export const portfolioData = {
     headline: "HAVE A PROJECT IN MIND?",
     subheadline: "Together, we can architect scalable, reliable, and high-performance backend systems. Let's collaborate to bring your ideas to life.",
     ctaButtonText: "Contact Me",
-    email: "hello@devvx.in",
+    email: "deevvxxx@gmail.com",
     responseTime: "Usually responds within 24 hours",
   }
 };

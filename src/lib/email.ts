@@ -13,8 +13,8 @@ export async function sendContactEmail({ name, email, subject, message }: SendEm
   const secure = process.env.SMTP_SECURE === 'true' || port === 465;
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
-  const to = process.env.CONTACT_EMAIL_TO || 'hello@devvx.in';
-  const from = process.env.CONTACT_EMAIL_FROM || `"Devvx Portfolio" <noreply@devvx.in>`;
+  const to = process.env.CONTACT_EMAIL_TO || 'deevvxxx@gmail.com';
+  const from = process.env.CONTACT_EMAIL_FROM || `"Sagar Pratap Singh (Devvx)" <deevvxxx@gmail.com>`;
 
   // Development/Mock Mode when SMTP credentials are not supplied
   if (!host || !user || !pass) {
