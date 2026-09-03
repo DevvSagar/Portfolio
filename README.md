@@ -47,8 +47,8 @@ SMTP_PORT=587
 SMTP_SECURE=false
 SMTP_USER=your-smtp-username
 SMTP_PASS=your-smtp-password
-CONTACT_EMAIL_TO=hello@devvx.in
-CONTACT_EMAIL_FROM="Devvx Portfolio" <no-reply@devvx.in>
+CONTACT_EMAIL_TO=deevvxxx@gmail.com
+CONTACT_EMAIL_FROM="Sagar Pratap Singh (Devvx)" <deevvxxx@gmail.com>
 
 # Rate Limiting
 RATE_LIMIT_WINDOW_MINUTES=15
