@@ -42,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
         {/* Pills Bar */}
         <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-8">
           {/* Avatar Profile Pill */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#121214] text-white shadow-pill border border-black/10 transition-transform duration-200 hover:scale-105 select-none">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#121214] text-white shadow-pill border border-black/10 dark:border-white/10 transition-transform duration-200 hover:scale-105 select-none">
             <div className="relative w-7 h-7 rounded-full overflow-hidden bg-zinc-800 border border-white/20 shadow-inner flex-shrink-0">
               <Image
                 src={portfolioData.profile.avatarHeadshot || portfolioData.profile.avatar}
@@ -65,22 +65,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               target={social.href.startsWith('http') ? '_blank' : undefined}
               rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               onClick={social.href === '#contact' && onOpenContact ? (e) => { e.preventDefault(); onOpenContact(); } : undefined}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-zinc-800 text-xs font-medium border border-black/[0.08] shadow-sm hover:shadow-md hover:border-black/15 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-[#18181b] text-zinc-800 dark:text-zinc-200 text-xs font-medium border border-black/[0.08] dark:border-white/10 shadow-sm hover:shadow-md hover:border-black/15 dark:hover:border-white/20 hover:text-black dark:hover:text-white hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               aria-label={social.ariaLabel}
             >
-              <span className="text-zinc-500">{getSocialIcon(social.icon)}</span>
+              <span className="text-zinc-500 dark:text-zinc-400">{getSocialIcon(social.icon)}</span>
               <span>{social.name}</span>
             </a>
           ))}
         </div>
 
         {/* Bottom meta bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-zinc-400 pt-6 border-t border-zinc-200/60 max-w-4xl mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-zinc-400 dark:text-zinc-500 pt-6 border-t border-zinc-200/60 dark:border-zinc-800 max-w-4xl mx-auto">
           <p>© {new Date().getFullYear()} devvx.in — All Rights Reserved</p>
           <button
             onClick={scrollToTop}
             aria-label="Scroll to top of page"
-            className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-zinc-900 transition-colors focus:outline-none cursor-pointer"
+            className="inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors focus:outline-none cursor-pointer"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />

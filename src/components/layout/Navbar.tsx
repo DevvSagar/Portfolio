@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { portfolioData } from '@/data/portfolio';
 
 interface NavbarProps {
@@ -44,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'py-3 bg-white/80 backdrop-blur-md border-b border-black/[0.06] shadow-sm'
+          ? 'py-3 bg-white/80 dark:bg-[#09090b]/85 backdrop-blur-md border-b border-black/[0.06] dark:border-white/[0.08] shadow-sm'
           : 'py-5 bg-transparent'
       }`}
     >
@@ -60,21 +61,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
           </div>
 
           {/* Center: Clean Navigation Links (Desktop) */}
-          <nav className="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-medium text-zinc-700">
+          <nav className="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-medium text-zinc-700 dark:text-zinc-300">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="font-medium text-zinc-700 hover:text-black transition-colors focus:outline-none focus-visible:text-black cursor-pointer"
+                className="font-medium text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white transition-colors focus:outline-none focus-visible:text-black dark:focus-visible:text-white cursor-pointer"
               >
                 {link.name}
               </a>
             ))}
           </nav>
 
-          {/* Right: "Let's Talk ↗" Pill Button (Desktop) & Mobile Hamburger */}
-          <div className="flex items-center gap-3">
+          {/* Right: Theme Toggle, "Let's Talk ↗" Pill Button & Mobile Hamburger */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Theme Toggle Button (Desktop & Mobile) */}
+            <ThemeToggle />
+
             <Button
               variant="primary"
               size="sm"
@@ -88,7 +92,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
-              className="md:hidden p-2 rounded-full bg-white border border-black/10 text-zinc-800 hover:bg-zinc-50 shadow-sm focus:outline-none cursor-pointer"
+              className="md:hidden p-2 rounded-full bg-white dark:bg-[#18181b] border border-black/10 dark:border-white/10 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-800 shadow-sm focus:outline-none cursor-pointer"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -98,14 +102,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-black/10 px-6 py-5 shadow-xl animate-fade-in">
+        <div className="md:hidden bg-white/95 dark:bg-[#121214]/95 backdrop-blur-md border-b border-black/10 dark:border-white/10 px-6 py-5 shadow-xl animate-fade-in">
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-base font-semibold text-zinc-800 hover:text-black py-1 transition-colors"
+                className="text-base font-semibold text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white py-1 transition-colors"
               >
                 {link.name}
               </a>

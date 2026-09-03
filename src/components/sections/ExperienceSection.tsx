@@ -15,10 +15,10 @@ export const ExperienceSection: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="relative w-full py-16 sm:py-24 bg-white overflow-hidden">
+    <section id="experience" className="relative w-full py-16 sm:py-24 bg-white dark:bg-[#09090b] transition-colors duration-300 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Dark Container Card */}
-        <div className="relative w-full bg-[#18181b] rounded-3xl p-6 sm:p-10 lg:p-14 text-white shadow-2xl border border-zinc-800/80 overflow-hidden">
+        <div className="relative w-full bg-[#18181b] rounded-3xl p-6 sm:p-10 lg:p-14 text-white shadow-2xl border border-zinc-800/80 dark:border-white/[0.08] overflow-hidden">
           {/* Ghost Watermark */}
           <Watermark text="EXPERIENCE" theme="dark" />
 

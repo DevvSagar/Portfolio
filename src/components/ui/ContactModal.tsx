@@ -170,13 +170,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             role="dialog"
             aria-modal="true"
             aria-labelledby="contact-modal-title"
-            className="relative w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-black/[0.08] z-10 my-8 overflow-hidden"
+            className="relative w-full max-w-lg bg-white dark:bg-[#121214] rounded-3xl p-6 sm:p-8 shadow-2xl border border-black/[0.08] dark:border-white/10 z-10 my-8 overflow-hidden"
           >
             {/* Top Close Button */}
             <button
               onClick={onClose}
               aria-label="Close modal"
-              className="absolute top-6 right-6 p-2 rounded-full bg-zinc-100 text-zinc-500 hover:text-zinc-900 hover:bg-zinc-200 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-black cursor-pointer shadow-sm z-20"
+              className="absolute top-6 right-6 p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-black dark:focus-visible:ring-white cursor-pointer shadow-sm z-20"
             >
               <X className="w-5 h-5" />
             </button>
@@ -187,17 +187,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: 'spring', damping: 12, stiffness: 200 }}
-                  className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 mb-4 border border-emerald-200"
+                  className="w-16 h-16 bg-emerald-50 dark:bg-emerald-950/40 rounded-full flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4 border border-emerald-200 dark:border-emerald-800"
                 >
                   <CheckCircle2 className="w-8 h-8" />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-zinc-900 mb-2">Message Received!</h3>
-                <p className="text-zinc-600 text-sm max-w-sm mb-6 leading-relaxed">
+                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2">Message Received!</h3>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm max-w-sm mb-6 leading-relaxed">
                   {statusMessage}
                 </p>
                 <button
                   onClick={handleResetAndClose}
-                  className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-zinc-800 transition-colors shadow-sm"
+                  className="px-6 py-2.5 bg-black dark:bg-white text-white dark:text-zinc-950 text-sm font-medium rounded-full hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-sm cursor-pointer"
                 >
                   Back to Portfolio
                 </button>
@@ -209,11 +209,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                   <Badge variant="availability" className="mb-3">
                     Let&apos;s Build Together
                   </Badge>
-                  <h2 id="contact-modal-title" className="text-2xl font-bold text-zinc-900 tracking-tight">
+                  <h2 id="contact-modal-title" className="text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
                     Start a Conversation
                   </h2>
-                  <p className="text-zinc-500 text-sm mt-1">
-                    Have a backend architecture challenge, distributed system design, or project in mind? Drop a message below.
+                  <p className="text-zinc-500 dark:text-zinc-400 text-sm mt-1 leading-relaxed">
+                    Have a backend architecture challenge or project in mind? Drop a message below or email directly to{' '}
+                    <a
+                      href="mailto:deevvxxx@gmail.com"
+                      className="font-semibold text-zinc-900 dark:text-white underline underline-offset-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    >
+                      deevvxxx@gmail.com
+                    </a>.
                   </p>
                 </div>
 
@@ -243,11 +249,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
                   {/* Name Input */}
                   <div>
-                    <label htmlFor="name" className="block text-xs font-semibold text-zinc-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="name" className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-1.5">
                       Your Name <span className="text-red-500">*</span>
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-400">
+                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-400 dark:text-zinc-500">
                         <User className="w-4 h-4" />
                       </div>
                       <input
@@ -258,9 +264,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`w-full pl-10 pr-4 py-2.5 bg-zinc-50 border ${
-                          errors.name ? 'border-red-400 focus:ring-red-400' : 'border-zinc-200 focus:border-zinc-900 focus:ring-zinc-900'
-                        } rounded-xl text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-1 transition-all`}
+                        className={`w-full pl-10 pr-4 py-2.5 bg-zinc-50 dark:bg-zinc-900/80 border ${
+                          errors.name
+                            ? 'border-red-400 focus:ring-red-400'
+                            : 'border-zinc-200 dark:border-zinc-800 focus:border-zinc-900 dark:focus:border-white focus:ring-zinc-900 dark:focus:ring-white'
+                        } rounded-xl text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:ring-1 transition-all`}
                       />
                     </div>
                     {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
@@ -268,11 +276,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
                   {/* Email Input */}
                   <div>
-                    <label htmlFor="email" className="block text-xs font-semibold text-zinc-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="email" className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-1.5">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-400">
+                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-400 dark:text-zinc-500">
                         <Mail className="w-4 h-4" />
                       </div>
                       <input
@@ -283,9 +291,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                         placeholder="john@company.com"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full pl-10 pr-4 py-2.5 bg-zinc-50 border ${
-                          errors.email ? 'border-red-400 focus:ring-red-400' : 'border-zinc-200 focus:border-zinc-900 focus:ring-zinc-900'
-                        } rounded-xl text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-1 transition-all`}
+                        className={`w-full pl-10 pr-4 py-2.5 bg-zinc-50 dark:bg-zinc-900/80 border ${
+                          errors.email
+                            ? 'border-red-400 focus:ring-red-400'
+                            : 'border-zinc-200 dark:border-zinc-800 focus:border-zinc-900 dark:focus:border-white focus:ring-zinc-900 dark:focus:ring-white'
+                        } rounded-xl text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:ring-1 transition-all`}
                       />
                     </div>
                     {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -293,11 +303,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
                   {/* Subject Input */}
                   <div>
-                    <label htmlFor="subject" className="block text-xs font-semibold text-zinc-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="subject" className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-1.5">
                       Topic / Project Type
                     </label>
                     <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-400">
+                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-400 dark:text-zinc-500">
                         <Tag className="w-4 h-4" />
                       </div>
                       <input
@@ -307,14 +317,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                         placeholder="e.g. Distributed System Architecture / API Consulting"
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-2.5 bg-zinc-50 border border-zinc-200 focus:border-zinc-900 focus:ring-zinc-900 rounded-xl text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-1 transition-all"
+                        className="w-full pl-10 pr-4 py-2.5 bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 focus:border-zinc-900 dark:focus:border-white focus:ring-zinc-900 dark:focus:ring-white rounded-xl text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:ring-1 transition-all"
                       />
                     </div>
                   </div>
 
                   {/* Message Input */}
                   <div>
-                    <label htmlFor="message" className="block text-xs font-semibold text-zinc-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="message" className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider mb-1.5">
                       Message <span className="text-red-500">*</span>
                     </label>
                     <div className="relative">
@@ -326,9 +336,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                         placeholder="Tell me about your technical requirements, goals, timelines..."
                         value={formData.message}
                         onChange={handleChange}
-                        className={`w-full p-3.5 bg-zinc-50 border ${
-                          errors.message ? 'border-red-400 focus:ring-red-400' : 'border-zinc-200 focus:border-zinc-900 focus:ring-zinc-900'
-                        } rounded-xl text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-1 transition-all resize-none`}
+                        className={`w-full p-3.5 bg-zinc-50 dark:bg-zinc-900/80 border ${
+                          errors.message
+                            ? 'border-red-400 focus:ring-red-400'
+                            : 'border-zinc-200 dark:border-zinc-800 focus:border-zinc-900 dark:focus:border-white focus:ring-zinc-900 dark:focus:ring-white'
+                        } rounded-xl text-sm text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:outline-none focus:ring-1 transition-all resize-none`}
                       />
                     </div>
                     {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
@@ -339,7 +351,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3 px-6 bg-black hover:bg-zinc-800 active:scale-[0.99] text-white font-medium text-sm rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                      className="w-full py-3 px-6 bg-black dark:bg-white hover:bg-zinc-800 dark:hover:bg-zinc-200 active:scale-[0.99] text-white dark:text-zinc-950 font-medium text-sm rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                     >
                       {isSubmitting ? (
                         <>

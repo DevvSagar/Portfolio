@@ -74,7 +74,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           <span className="text-stroke-outline text-[4.5rem] sm:text-[7rem] md:text-[9.5rem] lg:text-[12rem] font-black uppercase leading-none" aria-hidden="true">
             {portfolioData.profile.firstNameOutline}
           </span>
-          <span className="text-zinc-900 text-[4.5rem] sm:text-[7rem] md:text-[9.5rem] lg:text-[12rem] font-black uppercase leading-none" aria-hidden="true">
+          <span className="text-zinc-900 dark:text-white text-[4.5rem] sm:text-[7rem] md:text-[9.5rem] lg:text-[12rem] font-black uppercase leading-none" aria-hidden="true">
             {portfolioData.profile.lastNameSolid}
           </span>
         </motion.div>
@@ -90,11 +90,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="md:col-span-4 z-20 pb-6 sm:pb-10 text-center md:text-left"
           >
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mb-2">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight mb-2">
               <span className="sr-only">Sagar Pratap Singh — </span>
               {portfolioData.profile.role}
             </h1>
-            <p className="text-sm sm:text-base text-zinc-600 font-normal leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
+            <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed mb-6 max-w-sm mx-auto md:mx-0">
               {portfolioData.profile.tagline}
             </p>
             <div>
@@ -168,10 +168,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
                 target={social.href.startsWith('http') ? '_blank' : undefined}
                 rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 onClick={social.href === '#contact' ? (e) => { e.preventDefault(); onOpenContact(); } : undefined}
-                className="group inline-flex items-center justify-start gap-3 w-36 sm:w-40 md:w-44 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full bg-white text-zinc-800 text-sm font-semibold border border-black/[0.08] shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-black/20 hover:text-black hover:-translate-x-1.5 transition-all duration-200 cursor-pointer select-none"
+                className="group inline-flex items-center justify-start gap-3 w-36 sm:w-40 md:w-44 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full bg-white dark:bg-[#18181b] text-zinc-800 dark:text-zinc-200 text-sm font-semibold border border-black/[0.08] dark:border-white/10 shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-[0_2px_8px_rgba(0,0,0,0.4)] hover:shadow-md hover:border-black/20 dark:hover:border-white/25 hover:text-black dark:hover:text-white hover:-translate-x-1.5 transition-all duration-200 cursor-pointer select-none"
                 aria-label={social.ariaLabel}
               >
-                <span className="text-zinc-500 transition-colors group-hover:text-black flex-shrink-0">
+                <span className="text-zinc-500 dark:text-zinc-400 transition-colors group-hover:text-black dark:group-hover:text-white flex-shrink-0">
                   {getSocialIcon(social.icon)}
                 </span>
                 <span className="truncate">{social.name}</span>

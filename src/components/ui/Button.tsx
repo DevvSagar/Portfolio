@@ -36,15 +36,15 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantStyles = {
     primary:
-      'bg-[#121214] text-white hover:bg-black shadow-pill hover:shadow-pill-dark hover:-translate-y-0.5 border border-black/10',
+      'bg-[#121214] dark:bg-white text-white dark:text-zinc-950 hover:bg-black dark:hover:bg-zinc-200 shadow-pill hover:shadow-pill-dark hover:-translate-y-0.5 border border-black/10 dark:border-white/20',
     secondary:
-      'bg-white text-zinc-900 hover:bg-zinc-50 border border-black/[0.08] shadow-sm hover:shadow-md hover:-translate-y-0.5',
+      'bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 hover:bg-zinc-50 dark:hover:bg-zinc-800 border border-black/[0.08] dark:border-white/10 shadow-sm hover:shadow-md hover:-translate-y-0.5',
     dark:
       'bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700/60 shadow-sm hover:-translate-y-0.5',
     outline:
-      'bg-transparent text-zinc-900 border border-black/20 hover:bg-black/5 hover:border-black/40',
+      'bg-transparent text-zinc-900 dark:text-zinc-100 border border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:border-black/40 dark:hover:border-white/40',
     ghost:
-      'bg-transparent text-zinc-700 hover:text-black hover:bg-black/5',
+      'bg-transparent text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5',
   };
 
   const combinedClassName = cn(

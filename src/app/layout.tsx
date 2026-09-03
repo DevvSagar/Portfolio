@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { ThemeProvider } from '@/context/ThemeContext';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -209,12 +210,17 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('theme');var d=s==='dark'||(!s&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();`,
+          }}
+        />
       </head>
       <body
         suppressHydrationWarning
-        className="font-sans bg-[#F8F8FA] text-zinc-900 antialiased selection:bg-black selection:text-white"
+        className="font-sans bg-[#F8F8FA] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 antialiased selection:bg-black dark:selection:bg-white selection:text-white dark:selection:text-black transition-colors duration-300"
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

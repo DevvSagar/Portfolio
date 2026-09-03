@@ -23,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8F8FA] text-zinc-900 selection:bg-zinc-900 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F8F8FA] dark:bg-[#09090b] text-zinc-900 dark:text-zinc-100 selection:bg-zinc-900 dark:selection:bg-zinc-100 selection:text-white dark:selection:text-zinc-900 transition-colors duration-300">
       {/* Top Navbar */}
       <Navbar onOpenContact={handleOpenContact} />
 

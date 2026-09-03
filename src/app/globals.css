@@ -13,9 +13,21 @@
     --border-color: rgba(0, 0, 0, 0.08);
   }
 
+  .dark {
+    --background: #09090b;
+    --foreground: #f4f4f5;
+    --muted: #a1a1aa;
+    --card-bg: #121214;
+    --border-color: rgba(255, 255, 255, 0.08);
+  }
+
   html {
     scroll-behavior: smooth;
     color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   body {
@@ -30,6 +42,11 @@
   ::selection {
     background-color: #18181b;
     color: #ffffff;
+  }
+
+  .dark ::selection {
+    background-color: #ffffff;
+    color: #09090b;
   }
 
   /* Clean native hardware cursor */
@@ -55,10 +72,19 @@
     text-stroke: 2.5px #09090b;
   }
 
+  .dark .text-stroke-outline {
+    -webkit-text-stroke: 2.5px #ffffff;
+    text-stroke: 2.5px #ffffff;
+  }
+
   @media (max-width: 768px) {
     .text-stroke-outline {
       -webkit-text-stroke: 1.5px #09090b;
       text-stroke: 1.5px #09090b;
+    }
+    .dark .text-stroke-outline {
+      -webkit-text-stroke: 1.5px #ffffff;
+      text-stroke: 1.5px #ffffff;
     }
   }
 
@@ -77,6 +103,10 @@
     white-space: nowrap;
     z-index: 0;
     line-height: 1;
+  }
+
+  .dark .watermark-text {
+    color: rgba(255, 255, 255, 0.03);
   }
 
   .watermark-text-dark {
@@ -100,6 +130,10 @@
     background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.95) 0%, rgba(243, 244, 246, 0.9) 60%, rgba(235, 237, 240, 0.95) 100%);
   }
 
+  .dark .bg-atmospheric {
+    background: radial-gradient(circle at 50% 20%, rgba(24, 24, 27, 0.95) 0%, rgba(15, 15, 18, 0.9) 60%, rgba(9, 9, 11, 0.98) 100%);
+  }
+
   .bg-card-shadow {
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
   }
@@ -116,10 +150,19 @@
 ::-webkit-scrollbar-track {
   background: #f1f1f4;
 }
+.dark ::-webkit-scrollbar-track {
+  background: #09090b;
+}
 ::-webkit-scrollbar-thumb {
   background: #d1d5db;
   border-radius: 4px;
 }
+.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
 ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }
