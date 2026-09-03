@@ -53,13 +53,13 @@ export const ConnectSection: React.FC<ConnectSectionProps> = ({ onOpenContact })
           {portfolioData.contact.subheadline}
         </motion.p>
 
-        {/* Contact Me CTA Button & Direct Email */}
+        {/* Contact Me CTA Button */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mb-16 flex flex-col items-center gap-4"
+          className="mb-16"
         >
           <Button
             variant="primary"
@@ -69,15 +69,6 @@ export const ConnectSection: React.FC<ConnectSectionProps> = ({ onOpenContact })
           >
             {portfolioData.contact.ctaButtonText}
           </Button>
-          <a
-            href="mailto:deevvxxx@gmail.com"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-          >
-            <span>Or write directly to</span>
-            <span className="font-semibold underline underline-offset-4 text-zinc-800 dark:text-zinc-200">
-              deevvxxx@gmail.com
-            </span>
-          </a>
         </motion.div>
       </div>
 

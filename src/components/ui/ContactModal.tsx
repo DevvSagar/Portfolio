@@ -206,20 +206,24 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               <div>
                 {/* Header */}
                 <div className="mb-6">
-                  <Badge variant="availability" className="mb-3">
-                    Let&apos;s Build Together
-                  </Badge>
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <Badge variant="availability">
+                      Let&apos;s Build Together
+                    </Badge>
+                    <a
+                      href="mailto:deevvxxx@gmail.com"
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:text-black dark:hover:text-white hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-zinc-200/80 dark:border-zinc-700/80 transition-all cursor-pointer"
+                      title="Direct Mail: deevvxxx@gmail.com"
+                    >
+                      <Mail className="w-3.5 h-3.5 text-zinc-500 dark:text-zinc-400" />
+                      <span>deevvxxx@gmail.com</span>
+                    </a>
+                  </div>
                   <h2 id="contact-modal-title" className="text-2xl font-bold text-zinc-900 dark:text-white tracking-tight">
                     Start a Conversation
                   </h2>
-                  <p className="text-zinc-500 dark:text-zinc-400 text-sm mt-1 leading-relaxed">
-                    Have a backend architecture challenge or project in mind? Drop a message below or email directly to{' '}
-                    <a
-                      href="mailto:deevvxxx@gmail.com"
-                      className="font-semibold text-zinc-900 dark:text-white underline underline-offset-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                    >
-                      deevvxxx@gmail.com
-                    </a>.
+                  <p className="text-zinc-500 dark:text-zinc-400 text-sm mt-1">
+                    Have a backend architecture challenge, distributed system design, or project in mind? Drop a message below.
                   </p>
                 </div>
 

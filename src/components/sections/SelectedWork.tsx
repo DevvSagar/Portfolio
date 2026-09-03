@@ -33,7 +33,7 @@ export const SelectedWork: React.FC<SelectedWorkProps> = ({ onOpenContact }) => 
   };
 
   return (
-    <section id="work" className="relative w-full py-20 sm:py-28 bg-white dark:bg-[#09090b] transition-colors duration-300 overflow-hidden">
+    <section id="work" className="relative w-full py-20 sm:py-28 bg-white dark:bg-[#09090b] border-t border-black/[0.08] dark:border-white/[0.12] transition-colors duration-300 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Background Watermark */}
         <div className="relative mb-12 sm:mb-16">

@@ -22,7 +22,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenContact 
   };
 
   return (
-    <section id="services" className="relative w-full py-20 sm:py-28 bg-[#F9F9FB] dark:bg-[#0c0c0e] transition-colors duration-300 overflow-hidden">
+    <section id="services" className="relative w-full py-20 sm:py-28 bg-[#F9F9FB] dark:bg-[#0c0c0e] border-t border-black/[0.08] dark:border-white/[0.12] transition-colors duration-300 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Background Ghost Watermark */}
         <div className="relative mb-12 sm:mb-16">
